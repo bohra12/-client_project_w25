@@ -1,0 +1,84 @@
+/* style.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Skip to Main Content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ffcc00;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    background: #00274C;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+/* Footer */
+footer {
+    background: #00274C;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* Responsive Typography */
+h1, h2, h3, p, a {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Grid Enhancements */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
